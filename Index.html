@@ -1,0 +1,163 @@
+<style>
+  .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 1.8fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header"
+    "body";
+}
+
+.header { grid-area: header; }
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "column";
+  grid-area: body;
+}
+
+.column {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "back back"
+    "gallery1 gallery1"
+    "arms arms"
+    "gallery2 gallery2";
+  grid-area: column;
+}
+
+.back {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "muscle text1";
+  grid-area: back;
+}
+
+.muscle {
+  grid-area: muscle;
+/*   height: 100px; */
+}
+  
+.text1 { grid-area: text1; }
+
+.gallery1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "left1 center1 right1";
+  grid-area: gallery1;
+}
+
+.left1 { grid-area: left1; }
+
+.center1 { grid-area: center1; }
+
+.right1 { grid-area: right1; }
+
+.arms {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "text2 biceps";
+  grid-area: arms;
+}
+
+.text2 { grid-area: text2; }
+
+.biceps { grid-area: biceps; }
+
+.gallery2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "left2 center2 right2";
+  grid-area: gallery2;
+}
+
+.left2 { grid-area: left2; }
+
+.center2 { grid-area: center2; }
+
+.right2 { grid-area: right2; }
+
+
+html, body , .container {
+  height: 100%;
+  margin: 0;
+}
+
+/* For presentation only, no need to copy the code below */
+
+.container * {
+  border: 1px solid red;
+  position: relative;
+}
+
+.container *:after {
+  content:attr(class);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+</style>
+
+
+
+
+<div class="container">
+  <div class="header"></div>
+  <div class="body">
+    <div class="column">
+      <div class="back">
+        <div class="muscle">
+          <img="https://ih1.redbubble.net/image.322219003.6973/fposter,small,wall_texture,product,750x1000.u4.jpg"/>
+      </div>
+        <div class="text1"></div>
+      </div>
+      <div class="gallery1">
+        <div class="left1"></div>
+        <div class="center1"></div>
+        <div class="right1"></div>
+      </div>
+      <div class="arms">
+        <div class="text2"></div>
+        <div class="biceps"></div>
+      </div>
+      <div class="gallery2">
+        <div class="left2"></div>
+        <div class="center2"></div>
+        <div class="right2"></div>
+      </div>
+    </div>
+  </div>
+</div>
